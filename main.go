@@ -87,6 +87,7 @@ func Signin(w http.ResponseWriter, r *http.Request) {
 	// we also set an expiry time which is the same as the token itself
 
 	// NOTE: here jwt Token also goes in as Cookie
+	fmt.Printf("Token set by signIn %s\n", tokenString)
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
 		Value:   tokenString,
@@ -138,6 +139,7 @@ func Welcome(w http.ResponseWriter, r *http.Request) {
 	}
 	// Finally, return the welcome message to the user, along with their
 	// username given in the token
+	fmt.Printf("Token used by Welcome %s\n", tknStr)
 	w.Write([]byte(fmt.Sprintf("Welcome %s!", claims.Username)))
 }
 
@@ -192,6 +194,7 @@ func Refresh(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Set the new token as the users `token` cookie
+	fmt.Printf("Token set by refresh %s\n", tokenString)
 	http.SetCookie(w, &http.Cookie{
 		Name:    "token",
 		Value:   tokenString,
@@ -208,4 +211,5 @@ func Logout(w http.ResponseWriter, r *http.Request) {
 		Name:    "token",
 		Expires: time.Now(),
 	})
+	// Write Code that for given user the token is Invalid
 }
