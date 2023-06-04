@@ -19,3 +19,5 @@ In header pass Cookie = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InV
 Response: 200 OK
 In console : Token used by Welcome eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiZXhwIjoxNjg1ODc1NTU1fQ.48ttVIHC6tPjiFZAVMtmEjHff7k_MBEUJc4NNvj1W2Y
 
+NOTE: 
+If you logout then welcome and refresh fails which is as Expected
