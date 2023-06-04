@@ -20,6 +20,8 @@ var users = map[string]string{
 	"user2": "password2",
 }
 
+// We assume that 2 users with thier password already exists in database i.e. map here.
+
 // Create a struct to read the username and password from the request body
 type Credentials struct {
 	Password string `json:"password"`
