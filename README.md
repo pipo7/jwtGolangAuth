@@ -1,4 +1,4 @@
-# jwtGolangAuth
+# jwtGolangAuth with username and password in map ; A basic working example.
 go get -u github.com/golang-jwt/jwt/v5
 reference of pacakge : https://github.com/golang-jwt/jwt
 
